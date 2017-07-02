@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.templateRow {
+  content: " ";
+  display: table;
+}
+
+.row {
+  &:before {
+    @extend .templateRow;
+  }
+  &:after {
+    @extend .templateRow;
+    clear: both;
+  }
+}
+
+[class*="col-"] {
+  float: left;
+  min-height: 7px;
+  padding: 7px 0px;
+}
+
+@function widthColumns($column) {
+  @return percentage(($column/12));
+}
+
+@for $column from 1 through 12 {
+  .col-#{$column} {
+    width: widthColumns($column);
+  }
+}
+
+@for $numColumn from 1 through 12 {
+  .col-#{$numColumn}-offset {
+    margin-left: widthColumns($numColumn);
+  }
+}
