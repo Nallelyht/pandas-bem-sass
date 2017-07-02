@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" type="image/x" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius+Unicase">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>PANDA BEM</title>
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li>Inicio</li>
-          <li>Pandas</li>
-          <li>Historía</li>
-          <li>Extinción</li>
-        </ul>
+      <nav class="container">
+        <div class="row">
+          <div class="col-8 col-4-offset menu">
+            <span><a href="#" class="menu__item">Inicio</a></span>
+            <span><a class="menu__item--active" href="#">Pandas</a></span>
+            <span><a class="menu__item" href="#">Historía</a></span>
+            <span><a class="menu__item" href="#">Extinción</a></span>
+          </div>
+        </div>          
       </nav>
     </header>
     <section>

@@ -1,0 +1,36 @@
+@import 'grid';
+
+header{
+  font-family:'Delius Unicase', cursive;
+  position: fixed;
+  background-color: rgb(139, 102, 139);
+  width: 100%;
+  top: 0;
+  color: #fff;
+  padding: 2%;
+  .menu{
+    padding: 14px 70px;
+    overflow: auto;
+    &__item{
+      margin: 3%;
+      text-decoration: none;
+      &--active{
+        margin: 3%;
+        text-decoration: none;
+        color: darkgray;
+      }
+      &--active:visited{
+        margin: 3%;
+        text-decoration: none;
+        color: #FFF;
+      }
+    }
+    span:hover{
+      background-color: gray;
+      font-size: 120%;
+    }
+    &__item:visited{
+      color: darkgray;
+    }
+  }
+}
