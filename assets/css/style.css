@@ -94,10 +94,10 @@
 
 body {
   background-color: rgba(175, 175, 175, 0.7);
-  font-family: 'Architects Daughter', cursive; }
+  font-family: "Architects Daughter", cursive; }
 
 header {
-  font-family: 'Delius Unicase', cursive;
+  font-family: "Delius Unicase", cursive;
   position: fixed;
   background-color: #8b668b;
   width: 100%;
@@ -115,15 +115,21 @@ header {
         margin: 3%;
         text-decoration: none;
         color: darkgray; }
+      header .menu__item--active:hover {
+        margin: 3%;
+        text-decoration: none;
+        color: #fff; }
       header .menu__item--active:visited {
         margin: 3%;
         text-decoration: none;
-        color: #FFF; }
+        color: #fff; }
     header .menu span:hover {
       background-color: gray;
       font-size: 120%; }
     header .menu__item:visited {
-      color: darkgray; }
+      color: #fff; }
+    header .menu__item:link {
+      color: #fff; }
 
 .img {
   margin-top: 7rem;

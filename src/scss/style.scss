@@ -1,40 +1,43 @@
 @import 'grid';
+@import 'variables';
+@import 'mixin';
+
 body{
-  background-color: rgba(175, 175, 175, 0.7);
-  font-family: 'Architects Daughter', cursive;
+  background-color: $background-gray;
+  font-family: $font-content;
 }
 header{
-  font-family:'Delius Unicase', cursive;
-  position: fixed;
-  background-color: rgb(139, 102, 139);
-  width: 100%;
-  top: 0;
-  padding: 2%;
-  margin-bottom: 2%;
-  z-index: 100;
+
+  @include style-header;
+
   .menu{
     padding: 14px 70px;
     overflow: auto;
     &__item{
-      margin: 3%;
-      text-decoration: none;
+
+      @include item (3%);
       &--active{
-        margin: 3%;
-        text-decoration: none;
+        @include item (3%);
         color: darkgray;
       }
-      &--active:visited{
-        margin: 3%;
-        text-decoration: none;
-        color: #FFF;
+      &--active:hover{
+        @include item (3%);
+        color: $white-color;
         }
+        &--active:visited{
+          @include item (3%);
+          color: $white-color;
+          }
     }
     span:hover{
       background-color: gray;
       font-size: 120%;
     }
     &__item:visited{
-      color: darkgray;
+      color: $white-color;
+    }
+    &__item:link{
+      color: $white-color;
     }
   }
 }
@@ -48,33 +51,20 @@ header{
     border: 10px solid rgba(139, 102, 139, .5);
   }
   .close{
-    position: absolute;
-    color: #fff;
-    margin: 1%;
-    cursor: pointer;
-    padding-right: 2%;    
+    @include style-close;    
   }
-  
+
 }
 .img-responsive {
-  display: block;
-  max-width: 100%;
-  width: 100%;
-  height: 10rem;
-  max-height: auto;
+  @include image-responsive;
 }
 
 .btn {  
-  font-weight: normal;    
-  padding: 4% 6%;  
-  margin: 5%;  
-  outline: none; 
-  border-radius: 5px;  
-  cursor: pointer;
+  @include style-btn;
   &--purple{
-    background-color: rgb(139, 102, 139);
-    color: #fff;
-    font-family: 'Delius Unicase', cursive
+    background-color: $background-purple;
+    color: $white-color;
+    font-family: $font-nav-btn;
   }
 }
 .lorem{
@@ -82,8 +72,8 @@ header{
   padding: 1rem;
 }
 footer{
-  background-color: rgb(139, 102, 139);
-  color: #fff;
+  background-color: $background-purple;
+  color: $white-color;
   p{
     text-align: center;
   }
